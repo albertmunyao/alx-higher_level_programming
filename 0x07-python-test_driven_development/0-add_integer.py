@@ -4,19 +4,10 @@
 Addition of two integers, with one predefined
 """
 
-
 def add_integer(a, b=98):
-
-    '''
-    Addition of two integers, with one predefined (98)
-    An exception is raised if a or b are not integers or
-    floats
-    '''
-
-    if type(a) is not int and type(a) is not float:
+    if not (isinstance(a, int) or isinstance(a, float)):
         raise TypeError("a must be an integer")
-
-    if type(b) is not int and type(b) is not float:
+    if not (isinstance(b, int) or isinstance(b, float)):
         raise TypeError("b must be an integer")
-
     return int(a) + int(b)
+
